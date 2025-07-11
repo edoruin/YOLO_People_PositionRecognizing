@@ -8,6 +8,8 @@
 </p>
 </div>
 
-
-![s](https://img.shields.io/badge/Codecov-F01F7A?style=for-the-badge&logo=Codecov&logoColor=white)
-
+<div align="center">
+![Python](https://img.shields.io/badge/Python-3.13.3-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![OpenCV](https://img.shields.io/badge/OpenCV-4.11.0.86-5C3EE8?style=for-the-badge&logo=opencv)
+![Ultralytics](https://img.shields.io/badge/Ultralytics-8.3.152-FF6347?style=for-the-badge)
+</div>
