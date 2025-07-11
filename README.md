@@ -32,4 +32,4 @@ for class_id, class_name in model.names.items():
     if class_name.lower() == "person":
         person_class_id = class_id
         break `
-        <\p>
+        </p>
