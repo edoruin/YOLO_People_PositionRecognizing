@@ -19,7 +19,7 @@ settings, is simple the code.
 
 
 <h3>Explanation</h3>
-<p>The code just have two files, the Recognize.py file and the yolov8n.pt this last isn't necessary because ultralytics library download the model if he isn't found when you run the code.
+<p>The code just have one file, the Recognize.py file  the ultralytics library will download the model if he isn't found when you run the code when you don't worry about it.
 
 The logic is simple, it's just create two borders at the left and right and apply an conditional when the people(person label of general YOLO model from ultralytics) is mayor of some of the boundary borders, he is in the right or left border. If he isn't none when he is center.
 
