@@ -3,8 +3,12 @@
     <h1>YOLO_People_PositionRecognizing</h1>
 </div>
 
-<div> 
-<p> Use YOLO and Opencv for recognize people position in the camera. This code use the opencv 
+<div align="center"> 
+<p> Use YOLO and Opencv for recognize people position in the camera. 
 </p>
+</div>
+
+<div>
+    
 </div>
 
