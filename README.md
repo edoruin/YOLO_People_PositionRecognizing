@@ -29,7 +29,7 @@ person_class_id = None
 for class_id, class_name in model.names.items():
     if class_name.lower() == "person":
         person_class_id = class_id
-        break `
+        break 
 ```
 
 In the center x and y we calculate the center point of predictions of models but just in case is a person(the label) we drawn a point where is the center point of prediction, this point is used like the object that touch the boundary lines(left and right) when is mayor, minor or is normal active the next conditionals.
