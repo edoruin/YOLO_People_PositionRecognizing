@@ -53,4 +53,4 @@ if first_center_x is not None:
 ```
 
 
-The rest of code is about opencv frame recording and the squarer of round the prediction of person.
+The rest of code is about opencv frame recording and the squarer of round the prediction of person. This project is an idea for apply to security cameras, robots or some systems for being human presence
