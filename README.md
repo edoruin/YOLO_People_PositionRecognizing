@@ -21,15 +21,38 @@ settings, is simple the code.
 <h3>Explanation</h3>
 <p>The code just have two files, the Recognize.py file and the yolov8n.pt this last isn't necessary because ultralytics library download the model if he isn't found when you run the code.
 
-The logic is simple, it's just create two borders at the left and right and apply an conditional when the people(person label of general YOLO model from ultralytics) touch the line, he is in the right, when touch the other line(left border) he is in the left, if he isn't touching none, he's in center.
+The logic is simple, it's just create two borders at the left and right and apply an conditional when the people(person label of general YOLO model from ultralytics) is mayor of some of the boundary borders, he is in the right or left border. If he isn't none when he is center.
 
 
 in the code first we extract the "person" label from Ultralytics YOLO general model:
-` 
+```
 #extracting the person class of model features
 person_class_id = None
 for class_id, class_name in model.names.items():
     if class_name.lower() == "person":
         person_class_id = class_id
         break `
-        </p>
+```
+
+In the center x and y we calculate the center point of predictions of models but just in case is a person(the label) we drawn a point where is the center point of prediction, this point is used like the object that touch the boundary lines(left and right) when is mayor, minor or is normal active the next conditionals.
+> [!NOTE]
+> you can close the opencv window press q key. you can change it in line 83 or waitkey function.
+```
+if first_center_x is not None:
+                if first_center_x < left_boundary:
+                    print("Person in left")
+                    cv2.putText(frame, "LEFT", (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
+                    Posicion_Persona = 'persona in left'
+                    
+                elif first_center_x > right_boundary:
+                    print("Person in right")
+                    cv2.putText(frame, "RIGHT", (width - 200, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
+                    Posicion_Persona = 'person in right'
+
+                else:
+                    cv2.putText(frame, "CENTER", (width // 2 - 50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+                    Posicion_Persona = 'person in center'
+```
+
+
+The rest of code is about opencv frame recording and the squarer of round the prediction of person.
