@@ -34,7 +34,7 @@ for class_id, class_name in model.names.items():
 
 In the center x and y we calculate the center point of predictions of models but just in case is a person(the label) we drawn a point where is the center point of prediction, this point is used like the object that touch the boundary lines(left and right) when is mayor, minor or is normal active the next conditionals.
 > [!NOTE]
-> you can close the opencv window press q key. you can change it in line 83 or waitkey function.
+> you can close the opencv window press "q" key. you can change it in line 83 or waitkey function.
 ```
 if first_center_x is not None:
                 if first_center_x < left_boundary:
