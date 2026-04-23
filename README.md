@@ -3,6 +3,10 @@
     <h1>YOLO_People_PositionRecognizing</h1>
 </div>
 
+<div align="center">
+    <h3><a href="README_EN.md">English Version (Professional)</a></h3>
+</div>
+
 <div align="center"> 
 <p> Use YOLO and Opencv for recognize people position in the camera. 
 </p>
